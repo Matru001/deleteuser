@@ -1,11 +1,14 @@
-import React from "react";
-import Select from "./pages/Select";
+import React from 'react';
+import { Provider } from 'react-redux';
+import { store } from './store';
+import Select from './pages/Select';
 
 function App() {
   return (
     <>
-      <Select />
-    
+      <Provider store={store}>
+        <Select />
+      </Provider>
     </>
   );
 }
